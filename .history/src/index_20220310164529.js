@@ -6,7 +6,7 @@ import { createAppStore } from "./store/config/storeConfig"
 import { Provider } from 'react-redux';
 
 ReactDOM.render(
-  <Provider store={createAppStore()}>
+  <Provider store={createAppStore}>
   <React.StrictMode>
     <App />
   </React.StrictMode>
