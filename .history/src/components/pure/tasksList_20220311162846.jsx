@@ -10,7 +10,7 @@ const TasksList = ({tasks, onTaskClick}) => {
                 {tasks.map((task, index) => (
                     <Task
                         key={index}
-                        {...task}
+                        task={task}
                         onClick={() => onTaskClick(task.id)}
                     />
                 ))}

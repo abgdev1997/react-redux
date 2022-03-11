@@ -10,7 +10,9 @@ const TasksList = ({tasks, onTaskClick}) => {
                 {tasks.map((task, index) => (
                     <Task
                         key={index}
-                        {...task}
+                        id={task.id}
+                        text={task.text}
+                        completed={task.completed}
                         onClick={() => onTaskClick(task.id)}
                     />
                 ))}

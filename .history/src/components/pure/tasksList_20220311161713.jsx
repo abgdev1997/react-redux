@@ -7,11 +7,12 @@ const TasksList = ({tasks, onTaskClick}) => {
         <div>
             <h1>Your Tasks</h1>
             <ul>
-                {tasks.map((task, index) => (
+                {tasks.map((task) => (
                     <Task
-                        key={index}
-                        {...task}
-                        onClick={() => onTaskClick(task.id)}
+                        key={task.id}
+                        id={task.id}
+                        completed={task.completed}
+                        onClick={onTaskClick(task.id)}
                     />
                 ))}
             </ul>
